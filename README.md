@@ -18,7 +18,7 @@ The Experiments I have did on IOT using NODE MCU & Arduino uno.
 
 ## Activities/Expirements
 
-1 - [Blink Internal Led]([https://linktodocumentation](https://github.com/SukumarReddy2115/IOT/tree/main/Blink%20Internal%20Led%20Node%20MCU/Code)
+1 - [Blink Internal Led](https://github.com/SukumarReddy2115/IOT/tree/main/Blink%20Internal%20Led%20Node%20MCU/Code)
 
 2 - [Blink External Led](https://linktodocumentation)
 
