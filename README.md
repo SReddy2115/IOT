@@ -22,7 +22,7 @@ The Experiments I have did on IOT using NODE MCU & Arduino uno.
 
 2 - [Blink External Led](https://github.com/SukumarReddy2115/IOT/tree/main/Blink%20External%20Led)
 
-3 - [Print Data in Serial Monitor](https://linktodocumentation)
+3 - [Print Data in Serial Monitor](https://github.com/SukumarReddy2115/IOT/tree/main/Print%20Data%20In%20serial%20Monitor)
 
 [Blink Internal Led](https://linktodocumentation)
 
