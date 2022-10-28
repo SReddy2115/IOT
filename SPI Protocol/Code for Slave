@@ -1,0 +1,18 @@
+SLAVE CODE:
+#include <SPI.h>
+#define LEDpin 7
+#define buttonpin 2
+volatile boolean received;
+volatile byte Slavereceived,Slavesend;
+int buttonvalue;
+int x;
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(buttonpin,INPUT);
+  pinMode(LEDpin,OUTPUT);
+  pinMode(MISO,OUTPUT);
+  SPCR |= _BV(SPE);
+  received = false;
+  SPI.attachInterrupt();
+}
