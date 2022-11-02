@@ -1,0 +1,49 @@
+
+//include liquidCrystal_I2C.h 
+//Tools -> Manage Libraries and type liquidCrystal_I2C
+
+#include <LiquidCrystal_I2C.h>
+int led = 4;
+int pin =3;
+//define I2C address......
+LiquidCrystal_I2C lcd(0x27,16,2);
+
+
+void setup() {
+  lcd.init();
+  lcd.clear();
+  lcd.backlight();
+
+  lcd.setCursor(2,0);
+  lcd.print("Hello World");
+
+  lcd.setCursor(2,1);
+  lcd.print("vibration");
+  pinMode(led, OUTPUT);
+  pinMode(pin, INPUT); 
+  Serial.begin(9600);
+  lcd.begin(16, 2);
+  lcd.clear();
+
+}
+
+void loop() {
+  long measurement =vibration();
+  delay(50);
+  Serial.println(measurement);
+  lcd.setCursor(0,0); // Sets the cursor to col 0 and row 0
+  lcd.print("Vibration Reading = : "); // Prints Sensor Val: to LCD
+  lcd.setCursor(1,1); // Sets the cursor to col 1 and row 0
+  lcd.print(measurement); // Prints value on Potpin1 to LCD
+  if (measurement > 500){
+    digitalWrite(led, HIGH);
+  }
+  else{
+    digitalWrite(led, LOW); 
+  }
+  
+}
+long vibration(){
+  long measurement=pulseIn (pin, HIGH);
+  return measurement;
+}
