@@ -14,7 +14,7 @@ MPU6050 mpu(Wire);
 unsigned long timer = 0;
 
 void setup() {
-  Serial.begin(115200);                               
+  Serial.begin(9600);                               
   if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C))  
   { 
     Serial.println(F("SSD1306 allocation failed"));
